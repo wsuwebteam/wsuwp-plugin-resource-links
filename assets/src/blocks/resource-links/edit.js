@@ -28,7 +28,12 @@ export default function Edit(props) {
 
     function buildRequestUrl() {
         const apiPath = `/wp-json/wsu-resource-links/v1/get-links`;
-        const url = new URL(apiPath, dataSource);
+        const url = new URL(dataSource);
+        url.pathname =
+            url.pathname
+                .split("/")
+                .filter((s) => s !== "")
+                .join("/") + apiPath;
 
         if (attributes.categories?.length > 0) {
             url.searchParams.append(
