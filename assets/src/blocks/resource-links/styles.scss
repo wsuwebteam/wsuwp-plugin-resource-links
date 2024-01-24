@@ -1,0 +1,25 @@
+.block-editor .wsu-gutenberg-resource-links {
+    .wsu-resource-links {
+        pointer-events: none;
+    }
+
+    &__term-selector {
+        position: relative;
+
+        .components-spinner {
+            position: absolute;
+            right: 0.5rem;
+            margin: 0;
+            top: 2rem;
+        }
+    }
+
+    .wsu-content-list__item {
+        pointer-events: none;
+    }
+
+    &__spinner {
+        display: block;
+        margin: 0 auto;
+    }
+}

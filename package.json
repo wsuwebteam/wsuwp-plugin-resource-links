@@ -1,0 +1,15 @@
+{
+    "name": "wsuwp-plugin-resource-links",
+    "version": "0.0.1",
+    "description": "Plugin to manage resource links.",
+    "main": "index.js",
+    "scripts": {
+        "start": "wp-scripts start assets/src/editor.js --output-path=assets/dist/",
+        "build": "wp-scripts build assets/src/editor.js --output-path=assets/dist/"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@wordpress/scripts": "^26.6.0"
+    }
+}
