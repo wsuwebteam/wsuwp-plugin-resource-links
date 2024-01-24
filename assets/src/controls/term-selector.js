@@ -14,13 +14,14 @@ const TermSelector = (props) => {
     } = props;
 
     const [searchInput, setSearchInput] = useState("");
-    const apiPath = `/wp-json/wp/v2/${taxonomy}?search=${searchInput}`;
+    const apiPath = `/wp-json/wp/v2/${taxonomy}`;
     const requestUrl = new URL(dataSource);
     requestUrl.pathname =
         requestUrl.pathname
             .split("/")
             .filter((s) => s !== "")
             .join("/") + apiPath;
+    requestUrl.searchParams.set("search", searchInput);
 
     const { data, isLoading, error } = useFetch(requestUrl.href);
     const suggestions =
