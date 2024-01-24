@@ -1,0 +1,51 @@
+.block-editor .wsu-gutenberg-resource-link {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 44rem;
+
+    &__preview {
+    }
+
+    &__post-title {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    &__section-title {
+        margin: 0;
+        margin-top: 0.75rem;
+
+        font-weight: 600;
+        font-size: 1.56em;
+    }
+
+    &__editor {
+        display: grid;
+        row-gap: 1rem;
+    }
+
+    &__field-label {
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 0.1em;
+        display: block;
+        text-transform: uppercase;
+    }
+
+    &__edit-field {
+        .components-base-control__help {
+            margin: 0;
+        }
+    }
+
+    &__text-control {
+        .components-text-control__input {
+        }
+    }
+}
+
+.post-type-resource_link .block-editor .editor-post-title__input {
+    display: none;
+}
