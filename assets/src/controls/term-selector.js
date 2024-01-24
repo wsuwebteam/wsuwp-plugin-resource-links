@@ -16,6 +16,12 @@ const TermSelector = (props) => {
     const [searchInput, setSearchInput] = useState("");
     const apiPath = `/wp-json/wp/v2/${taxonomy}?search=${searchInput}`;
     const requestUrl = new URL(apiPath, dataSource);
+    requestUrl.pathname =
+        requestUrl.pathname
+            .split("/")
+            .filter((s) => s !== "")
+            .join("/") + apiPath;
+
     const { data, isLoading, error } = useFetch(requestUrl.href);
     const suggestions =
         data && !isLoading && !error ? data.map((item) => item.name) : [];
